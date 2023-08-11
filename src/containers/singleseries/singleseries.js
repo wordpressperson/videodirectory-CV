@@ -12,7 +12,7 @@ class SingleSeries extends Component {
    	   //const { id } = this.props.match.params.replace(/:/g,'');
 	   const { id } =this.props.match.params;	
 	   console.log(id);
-	   fetch(`http://api.tvmaze.com/shows/${id}?embed=episodes`)
+	   fetch(`https://api.tvmaze.com/shows/${id}?embed=episodes`)
 	  .then((response) => response.json())
 	  .then(json => this.setState({show:json}))
 	  	console.log(this.state.show)
